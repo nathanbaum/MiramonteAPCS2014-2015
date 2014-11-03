@@ -1,0 +1,31 @@
+/*************************************
+ * @author Nathan (nbaum510@gmail.com)
+ *Title: Factors
+ *Precond: user inputs an int
+ *Postcond: outputs factors of int
+ ************************************/
+package Lab6Package;
+
+import java.util.Scanner;
+
+public class Lab6Factors {
+
+	public static void main(String[] args) {
+		int uInput;
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Input integer:");
+		uInput = scan.nextInt();
+		
+		for(int i=uInput; i==0; i--){
+			if(uInput%i == 0){
+				System.out.print(i + ", ");
+			}
+		}
+		
+		scan.close();
+
+	}
+
+}

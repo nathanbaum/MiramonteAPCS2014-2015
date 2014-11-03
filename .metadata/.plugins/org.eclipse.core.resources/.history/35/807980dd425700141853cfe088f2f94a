@@ -1,0 +1,85 @@
+/***************************************************************
+ * @title CurlyBraces
+ * @author Nathan Baum (nbaum510@gmail.com)
+ * @date 10/18/2014
+ * 
+ * Precondition: User inputs string.
+ * Postcondition: Prints number of: a's, e's, i's, o's, u's, 
+ * 				vowelic y's, consonants, spaces, and punctuation
+ * 				marks.
+ **************************************************************/
+package HomeworkPackage;
+import java.util.Scanner;
+
+public class stringEval {
+
+	public static void main(String[] args) {
+		int a=0, e=0, i=0, o=0, u=0, y=0, consonants=0, punctuation=0, spaces=0;
+		boolean yIsVowel=false;
+		char letter;
+		String uIn;
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("Enter string:");
+		uIn = scan.nextLine();
+		
+		for(int z=0; z<uIn.length(); z++){ //cycles through the string
+			letter = uIn.charAt(z); /*sets letter to character that the for
+									loop is looking at for convenient referencing
+									and so that the program can evaluate it as an
+									int in ascii*/
+			
+			if(letter == 'a' || letter == 'A'){
+				a++;
+				yIsVowel=false;
+			}
+			else if(letter == 'e' || letter == 'E'){
+				e++;
+				yIsVowel=true; //y is always a vowel when following an e
+			}
+			else if(letter == 'i' || letter == 'I'){
+				i++;
+				yIsVowel=false;
+			}
+			else if(letter == 'o' || letter == 'O'){
+				o++;
+				yIsVowel=false;
+			}
+			else if(letter == 'u' || letter == 'U'){
+				u++;
+				yIsVowel=false;
+			}
+			else if(letter == 'y' || letter == 'Y'){
+				if(yIsVowel == true){//if the preceding letter is a consonant, y is a vowel
+					y++;
+					yIsVowel = false;
+				}
+				else{ //if it is not, y is a consonant
+					consonants++;
+					yIsVowel=true;
+				}
+			}
+			else if((letter>=65 && letter<=90)||(letter>=97 && letter<=122)){ //A-Z and a-z				
+				consonants++;
+				yIsVowel=true;
+			}
+			else if(letter == ' '){ //if the letter is a space
+				spaces++;
+				yIsVowel=false;
+			}
+			else if(!(letter>=48 && letter<=57)){ //not a number
+				punctuation++;
+				yIsVowel=true;
+			}
+			else{ //if a number
+				yIsVowel=true;
+			}
+		}
+		
+		System.out.println("Your string has " + a + " a's, " + e + " e's, " + i + " i's, " + o + " o's, " + u + " u's, " + y + " vowelic y's, " + consonants + " consonants, " + spaces + " spaces, and " + punctuation + " punctuation marks.");
+		
+		scan.close();
+	}
+
+}

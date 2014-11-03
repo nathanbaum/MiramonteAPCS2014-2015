@@ -1,0 +1,10 @@
+package Lab6Package;
+
+public class Lab6WordSplitter {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,19 @@
+/***************************************************************
+ * @title TwoAndFive
+ * @author Nathan Baum (nbaum510@gmail.com)
+ * @date 10/13/2014
+ * 
+ * Precondition: User inputs number.
+ * Postcondition: Prints what combination of 5s and 2s is
+ * 				required to make the number.
+ **************************************************************/
+package HomeworkPackage;
+public class TwoAndFive {
+	
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

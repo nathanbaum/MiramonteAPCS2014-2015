@@ -1,0 +1,36 @@
+/***************************************************************
+ * @title String Numbers
+ * @author Nathan Baum (nbaum510@gmail.com)
+ * @date 10/24/2014
+ * 
+ * Precondition: User inputs string with numbers separated by a space.
+ * Postcondition: Prints the numbers in ascending order by value.
+ **************************************************************/
+package lab7Package;
+import java.util.Scanner;
+
+public class stringNums {
+
+	public static void main(String[] args) {
+		String uIn, returnStr;
+		
+		Scanner scan = new Scanner(System.in);
+		
+		uIn = scan.nextLine();
+		
+		
+		System.out.println("lowest number: " + returnStr);
+		
+		scan.close();
+	}
+
+	private static int[] sortAscend(int[] nums){
+		int temp;
+		int[nums.length];
+		
+		for(int i=0; i<nums.length; i++){
+			
+		}
+	}
+}
+

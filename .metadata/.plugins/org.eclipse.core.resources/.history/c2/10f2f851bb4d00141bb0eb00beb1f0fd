@@ -1,0 +1,26 @@
+
+import java.util.Scanner;
+public class Sandbox {
+
+	public static void main(String[] args) {
+		int uIn;
+
+		Scanner scan = new Scanner(System.in);
+
+		while(true){
+		   try{
+		      System.out.println("Enter a positive int");
+		      uIn = scan.nextInt();
+		      if(uIn>0) break;
+		   }
+		   catch(Exception e){
+		      System.out.println("Invalid Input");
+		      scan.next();
+		   }
+		   System.out.println("Invalid Input");
+		}
+		scan.close();
+
+	}
+
+}

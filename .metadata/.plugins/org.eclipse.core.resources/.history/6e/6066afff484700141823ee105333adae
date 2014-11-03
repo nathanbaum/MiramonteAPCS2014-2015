@@ -1,0 +1,50 @@
+/*************************************
+ * @author Nathan
+ *Title: Coin Flip
+ *Precond: user calls heads or tails
+ *Postcond: prints user's name and if user wins or loses
+ ************************************/
+import java.util.Random;
+import java.util.Scanner;
+public class Lab5CoinFlip {
+
+	public static void main(String[] args) {
+		Random rand = new Random();
+		Scanner scan = new Scanner(System.in);
+		
+		boolean coin; 
+		boolean boUChoice = false;
+		String name, strUChoice;
+		
+		System.out.println("Input your name:");
+		name = scan.next();
+		
+		while(true){
+			System.out.println("Call heads or tails:");
+			strUChoice = scan.next();
+		
+			if(strUChoice.toLowerCase() == "heads"){
+				boUChoice = true;
+				break;
+			}
+			else if(strUChoice.toLowerCase() == "tails"){
+				boUChoice = false;
+				break;
+			}
+			else if(strUChoice == "X"){
+				break;
+			}
+			else{
+				System.out.println("Invalid Input: \"" + strUChoice.toLowerCase() + "\" is not a valid responce. Please try again.");
+				break;
+			}
+		}
+		
+		coin = rand.nextBoolean();
+		
+		System.out.println(name + ", you win: " + (coin == boUChoice));
+		scan.close();
+
+	}
+
+}

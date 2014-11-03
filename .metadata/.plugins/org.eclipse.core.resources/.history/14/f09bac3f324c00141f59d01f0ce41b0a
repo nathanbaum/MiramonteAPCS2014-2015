@@ -1,0 +1,16 @@
+/*************************************
+ * @author Nathan (nbaum510@gmail.com)
+ *Title: Number Guess Extension
+ *Precond: user guesses mystery number
+ *Postcond: user wins or loses
+ ************************************/
+package Lab6Package;
+
+public class Lab6NumberGuessExtension {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
