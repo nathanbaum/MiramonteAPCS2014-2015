@@ -1,0 +1,11 @@
+package libraryPackage;
+
+public class Book {
+	String title, author;
+	
+	public void Book(String title, String author){
+		this.title = title;
+		this.author = author;
+	}
+
+}
