@@ -8,9 +8,9 @@ public class Bus {
 	
 	//non parameterized constructor
 	public Bus(){
-		this.routeNo = -1;
-		this.destination = "not set";
-		this.departureTime = "not set";
+		this.routeNo = 0;
+		this.destination = "nowhere";
+		this.departureTime = "never";
 	}
 	
 	// parameterized constructor
@@ -42,6 +42,6 @@ public class Bus {
 	}
 	
 	public String info(){
-		return "routeNo:\t" + routeNo + "\ndestination:\t" + destination + "\ndeparture time:\t" + departureTime;
+		return "routeNo:\t" + 
 	}
 }

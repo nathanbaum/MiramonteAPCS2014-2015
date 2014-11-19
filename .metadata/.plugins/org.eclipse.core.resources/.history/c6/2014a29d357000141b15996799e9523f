@@ -7,11 +7,6 @@ public class Bus {
 	private String departureTime;
 	
 	//non parameterized constructor
-	public Bus(){
-		this.routeNo = -1;
-		this.destination = "not set";
-		this.departureTime = "not set";
-	}
 	
 	// parameterized constructor
 	public Bus(int routeNo, String destination, String departureTime){

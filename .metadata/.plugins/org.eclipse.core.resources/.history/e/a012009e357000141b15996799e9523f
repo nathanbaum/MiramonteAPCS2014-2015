@@ -3,8 +3,8 @@ package BusStationPackage;
 public class BusStation {
 
 	private String Address;
-	private Bus bus1 = new Bus();
-	private Bus bus2 = new Bus();
+	private Bus bus1;
+	private Bus bus2;
 	
 	//non-parameterized constructor
 

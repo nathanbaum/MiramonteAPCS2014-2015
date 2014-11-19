@@ -3,6 +3,7 @@ package BusStationPackage;
 public class SanFranciscoBusStation {
 
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 
 		BusStation sfBusStation = new BusStation();
 		
