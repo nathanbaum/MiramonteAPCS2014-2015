@@ -1,0 +1,18 @@
+package BlackJackPack;
+import java.util.Scanner;
+
+public class Dealer {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		boolean gameIsOn = true;
+		
+		while(gameIsOn){
+			
+		}
+		
+		scan.close();
+	}
+
+}
