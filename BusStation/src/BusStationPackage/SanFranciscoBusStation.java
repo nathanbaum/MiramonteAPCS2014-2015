@@ -12,8 +12,8 @@ public class SanFranciscoBusStation {
 		sfBusStation.setBus(2, 456, "San Diego", "11:00 AM");
 		
 		System.out.println("Busses leave from the " + sfBusStation.getAddress() +" bus station are as follows: ");
-		System.out.println(sfBusStation.getBus(1));
-		System.out.println(sfBusStation.getBus(2));
+		System.out.println("Bus 1:\n" + sfBusStation.getBus(1));
+		System.out.println("Bus 2:\n" + sfBusStation.getBus(2));
 	}
 
 }

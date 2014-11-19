@@ -5,6 +5,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="F:\Git\MiramonteAPCS2014-2015\BusStation"/>
 			<item value="F:\mobile_workspace\Lab8"/>
 			<item value="F:\mobile_workspace"/>
 		</list>

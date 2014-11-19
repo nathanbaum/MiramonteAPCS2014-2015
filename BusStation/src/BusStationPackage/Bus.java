@@ -7,13 +7,41 @@ public class Bus {
 	private String departureTime;
 	
 	//non parameterized constructor
-
+	public Bus(){
+		this.routeNo = 0;
+		this.destination = "nowhere";
+		this.departureTime = "never";
+	}
 	
 	// parameterized constructor
+	public Bus(int routeNo, String destination, String departureTime){
+		this.routeNo = routeNo;
+		this.destination = destination;
+		this.departureTime = departureTime;
+	}
+	
+	//getters and setters for each of the 3 variables.
+	public int getRouteNo() {
+		return routeNo;
+	}
+	public String getDestination() {
+		return destination;
+	}
+	public String getDepartureTime() {
+		return departureTime;
+	}
 
+	public void setRouteNo(int routeNo) {
+		this.routeNo = routeNo;
+	}
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+	public void setDepartureTime(String departureTime) {
+		this.departureTime = departureTime;
+	}
 	
-	//getters and setters for each of the 3 variables. 
-
-	
-	
+	public String info(){
+		return "routeNo:\t" + 
+	}
 }

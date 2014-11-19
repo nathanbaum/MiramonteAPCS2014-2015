@@ -20,14 +20,22 @@ public class BusStation {
 	
 	//getBus(int busNumber) - if bus number is 1, send the info for bus 1, otherwise send the info for bus 2
 	public Bus getBus(int busNum) {
-		if(busNum == 1) return bus1;
-		return bus2;
+		if(busNum == 1) return bus1.info();
+		return bus2.info();
 	}
 	
 	//setBus(int busNumber) - if bus number is 1, set the info for bus 1, otherwise set the info for bus 2
-	public void setBus(int busNum, Bus bus) {
-		if(busNum == 1) this.bus1 = bus;
-		this.bus2 = bus;
+	public void setBus(int busNum, int routeNo, String destination, String departureTime) {
+		if(busNum == 1){
+			this.bus1.setRouteNo(routeNo);
+			this.bus1.setDestination(destination);
+			this.bus1.setDepartureTime(departureTime);
+		}
+		else{
+			this.bus2.setRouteNo(routeNo);
+			this.bus2.setDestination(destination);
+			this.bus2.setDepartureTime(departureTime);
+		}
 	}
 	
 }
