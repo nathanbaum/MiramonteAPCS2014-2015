@@ -29,15 +29,11 @@ public class Hand {
 		return str;
 	}
 	
-	public String bleed(int card){
-		return hand.get(card).toString();
+	public String bleed(){
+		return hand.get(0).toString();
 	}
 	
 	public void addCard(Card card) {
 		hand.add(card);
-	}
-	
-	public int getSize(){
-		return hand.size();
 	}
 }

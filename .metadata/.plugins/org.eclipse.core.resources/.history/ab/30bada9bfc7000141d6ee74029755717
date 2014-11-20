@@ -28,7 +28,7 @@ public class Dealer {
 			}
 			System.out.println("\nYour hand is: \n" + playerHand.toString());
 			
-			System.out.println("One of my cards is: " + dealerHand.bleed(0));
+			System.out.println("One of my cards is: " + dealerHand.bleed());
 			
 			while(playerHit){
 				while(true){
@@ -41,7 +41,6 @@ public class Dealer {
 				if(uIn.equals("y")){//operator for whether the player hits or stands
 					System.out.println("You hit.");
 					playerHand.addCard(deck.draw());
-					System.out.println("You draw " + playerHand.bleed(playerHand.getSize()-1));
 					System.out.print("\nYour hand is: \n" + playerHand.toString());
 				}
 				else{
