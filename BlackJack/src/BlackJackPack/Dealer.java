@@ -26,7 +26,7 @@ public class Dealer {
 				System.out.println("one for me...");
 				dealerHand.addCard(deck.draw());
 			}
-			System.out.print("\nYour hand is: \n" + playerHand.toString());
+			System.out.println("\nYour hand is: \n" + playerHand.toString());
 			
 			System.out.println("\nOne of my cards is: " + dealerHand.bleed());
 			
