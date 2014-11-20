@@ -41,7 +41,7 @@ public class Dealer {
 				if(uIn.equals("y")){//operator for whether the player hits or stands
 					System.out.println("You hit.");
 					playerHand.addCard(deck.draw());
-					System.out.print("\nYour hand is: \n" + playerHand.toString());
+					System.out.print("Your hand is: \n" + playerHand.toString());
 				}
 				else{
 					System.out.println("You stand.");

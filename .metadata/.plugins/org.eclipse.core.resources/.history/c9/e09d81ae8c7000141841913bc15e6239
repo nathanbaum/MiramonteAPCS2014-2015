@@ -16,8 +16,6 @@ public class Dealer {
 			deck = new Deck();
 			playerHand = new Hand();
 			dealerHand = new Hand();
-			uIn = "";
-			playerHit = true;
 			
 			System.out.println("I'm dealing the cards.");
 			for(int i=0; i<2; i++){
@@ -41,14 +39,14 @@ public class Dealer {
 				if(uIn.equals("y")){//operator for whether the player hits or stands
 					System.out.println("You hit.");
 					playerHand.addCard(deck.draw());
-					System.out.print("\nYour hand is: \n" + playerHand.toString());
+					System.out.print("Your hand is: \n" + playerHand.toString());
 				}
 				else{
 					System.out.println("You stand.");
 					playerHit = false;
 				}
 				if(playerHand.getValue()>21){//checks if the player loses
-					System.out.println("\nYou bust. House wins.");
+					System.out.println("You bust. House wins.");
 					gameIsOn = false;
 					break;
 				}
@@ -58,7 +56,7 @@ public class Dealer {
 				}
 				else System.out.println("\nI stand.");
 				if(dealerHand.getValue()>21){
-					System.out.println("\nI bust. You win.");
+					System.out.println("I bust. You win.");
 					gameIsOn = false;
 				}
 			}
@@ -67,7 +65,7 @@ public class Dealer {
 				System.out.println("\nI hit.");
 				dealerHand.addCard(deck.draw());
 				if(dealerHand.getValue()>21){
-					System.out.println("\nI bust. You win.");
+					System.out.println("I bust. You win.");
 					gameIsOn = false;
 				}
 			}
@@ -76,14 +74,14 @@ public class Dealer {
 			
 			if(gameIsOn){
 				System.out.print("\nI have:\n" + dealerHand.toString());
-				if(dealerHand.getValue()>playerHand.getValue()) System.out.println("\nHouse wins.");
-				else if(dealerHand.getValue()<playerHand.getValue()) System.out.println("\nYou win.");
-				else System.out.println("\nWe tied.");
+				if(dealerHand.getValue()>playerHand.getValue()) System.out.println("House wins.");
+				else if(dealerHand.getValue()<playerHand.getValue()) System.out.println("You win.");
+				else System.out.println("We tied.");
 			}
 			
 			gameIsOn = true;
 			while(true){
-				System.out.println("\nWould you like to play again?(y/n)");
+				System.out.println("Would you like to play again?(y/n)");
 				uIn = scan.next();
 				uIn = Character.toString(uIn.toLowerCase().charAt(0));
 				if(uIn.equals("y") || uIn.equals("n")) break;
