@@ -28,11 +28,11 @@ public class Dealer {
 			}
 			System.out.println("\nYour hand is: \n" + playerHand.toString());
 			
-			System.out.println("\nOne of my cards is: " + dealerHand.bleed());
+			System.out.println("One of my cards is: " + dealerHand.bleed());
 			
 			while(playerHit){
 				while(true){
-					System.out.println("Would you like to hit?(y/n)");
+					System.out.println("\nWould you like to hit?(y/n)");
 					uIn = scan.next();
 					uIn = Character.toString(uIn.toLowerCase().charAt(0));
 					if(uIn.equals("y") || uIn.equals("n")) break;
@@ -52,15 +52,6 @@ public class Dealer {
 					gameIsOn = false;
 					break;
 				}
-				if(dealerHit(dealerHand.getValue())){//operator for whether the dealer hits or stands
-					System.out.println("\nI hit.");
-					dealerHand.addCard(deck.draw());
-				}
-				else System.out.println("\nI stand.");
-				if(dealerHand.getValue()>21){
-					System.out.println("\nI bust. You win.");
-					gameIsOn = false;
-				}
 			}
 			
 			while(dealerHit(dealerHand.getValue()) && gameIsOn){
@@ -71,7 +62,7 @@ public class Dealer {
 					gameIsOn = false;
 				}
 			}
-			System.out.println("I stand.");
+			if(gameIsOn) System.out.println("I stand.");
 
 			
 			if(gameIsOn){
