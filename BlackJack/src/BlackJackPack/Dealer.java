@@ -45,7 +45,7 @@ public class Dealer {
 					System.out.print("\nYour hand is: \n" + playerHand.toString());
 				}
 				else{
-					System.out.println("You stand.");
+					System.out.println("You stand.\n");
 					playerHit = false;
 				}
 				if(playerHand.getValue()>21){//checks if the player loses
@@ -56,7 +56,7 @@ public class Dealer {
 			}
 			
 			while(dealerHit(dealerHand.getValue()) && gameIsOn){
-				System.out.println("\nI hit.");
+				System.out.println("I hit.");
 				dealerHand.addCard(deck.draw());
 				if(dealerHand.getValue()>21){
 					System.out.println("\nI bust. You win.");
