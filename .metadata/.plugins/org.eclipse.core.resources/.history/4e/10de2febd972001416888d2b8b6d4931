@@ -1,0 +1,46 @@
+package BlackJackPack;
+import java.util.Scanner;
+
+public class BlackJackDriver {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int players;
+		boolean gameIsOn = true;
+		String uIn;
+		
+		while(gameIsOn){
+			while(true){
+				System.out.println("How many players are there?");
+				try{
+					players = scan.nextInt();
+					break;
+				}
+				catch(Exception e){
+					System.out.println("Invalid Input");
+					scan.next();
+				}
+			}
+			Dealer bJDealer = new Dealer(players);
+			bJDealer.deal();
+			bJDealer.printHands();
+			if(!bJDealer.hasBlackJack()){
+				bJDealer.playersHit();
+				bJDealer.dealerHit();
+			}
+			bJDealer.getWinners();
+			
+			while(true){
+				System.out.println("\nWould you like to play again?");
+				uIn = scan.next();
+				uIn = Character.toString(uIn.toLowerCase().charAt(0));
+				if(uIn.equals("y") || uIn.equals("n")) break;
+				System.out.println("It was a yes or no question.");
+			}
+			if(uIn.equals("n")) gameIsOn = false;
+		}
+		
+		scan.close();
+	}
+
+}
