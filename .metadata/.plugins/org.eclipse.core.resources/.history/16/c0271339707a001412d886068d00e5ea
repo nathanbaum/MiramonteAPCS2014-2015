@@ -10,7 +10,7 @@ public class ClassArray {
 		
 		myArray[15] = 'g';
 		
-		System.out.println(findIndices(myArray));//It won't work this way
+		System.out.println(findIndices(myArray));
 	}
 	
 	public static int[] findIndices(char[] myArray){
