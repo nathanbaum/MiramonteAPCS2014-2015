@@ -1,0 +1,19 @@
+package HomeworkPackage;
+
+public class ClassArray {
+	public static void main(String[] args){
+		int index = 0;
+		char[] myArray = new char[26];
+	
+		for(int i=0; i<myArray.length; i++){
+			myArray[i] = (char) (i+97);
+		}
+		
+		myArray[15] = 'G';
+		
+		for(int i=0; i<myArray.length; i++){
+			if(myArray[i] == 'g') index=i+1;
+		}
+		System.out.println(index);
+	}
+}

@@ -38,15 +38,18 @@ public class Dealer {
 	public void deal(){
 		Card burn;
 		System.out.println("\nFirst, I'll burn the top card.");
+		try {Thread.sleep(2000);} catch (InterruptedException e){}
 		burn = deck.draw();
 		//System.out.println(burn.toString());
 		//System.out.println(deck.toString());
 		System.out.println("Then, I'll deal out the cards.");
      		for(int i=0; i<2; i++){
 			for(int h=0; h<playerHands.length; h++){
+				try {Thread.sleep(1000);} catch (InterruptedException e){}
 				System.out.println("One for player " + (h+1) + ".");
 				playerHands[h].addCard(deck.draw());
 			}
+			try {Thread.sleep(1000);} catch (InterruptedException e){}
 			System.out.println("One for me.");
 			dealerHand.addCard(deck.draw());
 		}
@@ -73,13 +76,16 @@ public class Dealer {
 				if(uIn.equals("y")){//operator for whether the player hits or stands
 					System.out.println("Player " + (i+1) + " hits.");
 					playerHands[i].addCard(deck.draw());
+					try {Thread.sleep(1000);} catch (InterruptedException e){}
 					System.out.println("Player " + (i+1) + " draws " + playerHands[i].bleed(playerHands[i].getSize()-1));
+					try {Thread.sleep(1000);} catch (InterruptedException e){}
 					System.out.print("Player " + (i+1) + "'s hand is: \n" + playerHands[i].toString());
 				}
 				else{
 					System.out.println("Player " + (i+1) + " stands.");
 					break;
 				}
+				try {Thread.sleep(2000);} catch (InterruptedException e){}
 				if(playerHands[i].getValue()>21){//checks if the player loses
 					System.out.println("Player " + (i+1) + " busts.");
 					break;
@@ -91,9 +97,11 @@ public class Dealer {
 	public void dealerHit(){
 		System.out.println();
 		while(dealerHand.getValue()<17){
+			try {Thread.sleep(1000);} catch (InterruptedException e){}
 			System.out.println("I hit.");
 			dealerHand.addCard(deck.draw());
 		}
+		try {Thread.sleep(1000);} catch (InterruptedException e){}
 		System.out.println("I stand.");
 	}
 	
@@ -103,6 +111,7 @@ public class Dealer {
 	}
 	
 	public void getWinners(){
+		try {Thread.sleep(1000);} catch (InterruptedException e){}
 		if(dealerHand.getValue()>21) System.out.println("\nHouse busts. Everybody wins.");
 		else{
 			if(hasBlackJack()) System.out.println("House gets blackjack.");
