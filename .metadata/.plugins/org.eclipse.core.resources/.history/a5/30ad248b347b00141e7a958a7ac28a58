@@ -9,9 +9,7 @@ public class ClassArray {
 		}
 		
 		myArray[15] = 'g';
-		myArray[18] = 'g';
 		
-		System.out.println("There are " + findIndices(myArray).length + " g's in the array. They are at indices:");
 		for(int i=0; i<findIndices(myArray).length; i++){
 			System.out.println(findIndices(myArray)[i]);
 		}
