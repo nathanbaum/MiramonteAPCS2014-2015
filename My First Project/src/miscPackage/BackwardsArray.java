@@ -9,13 +9,11 @@ public class BackwardsArray {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.print("Length of array of numbers:");
-		arrayLength = scanInt(scan);
+		arrayLength = scanInt(scan, "Input number of numbers:");
 		
 		nums = new int[arrayLength];
 		for(int i=0; i<nums.length; i++){
-			System.out.print("Integer " + (i+1) + ":");
-			nums[i] = scanInt(scan);
+			nums[i] = scanInt(scan, ("Input integer " + (i+1) + ":"));
 		}
 		
 		nums = reverseArray(nums);
@@ -31,12 +29,20 @@ public class BackwardsArray {
 	
 	public static int[] reverseArray(int[] array){
 		int holder;
+		
+		for(int i=array.length-1; i>=array.length/2; i--){
+			holder = array[(array.length-1)-i];
+			array[(array.length-1)-i] = array[i];
+			array[i] = holder;
+		}
+		return array;
 	}
 	
-	public static int scanInt(Scanner scan){
+	public static int scanInt(Scanner scan, String prompt){
 		int num;
 		while(true){
 			try{
+				System.out.print("\n" + prompt);
 				num = scan.nextInt();
 				break;
 			}
@@ -48,3 +54,4 @@ public class BackwardsArray {
 		return num;
 	}
 }
+
