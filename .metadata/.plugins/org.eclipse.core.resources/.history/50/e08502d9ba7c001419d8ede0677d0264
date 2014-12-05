@@ -1,0 +1,41 @@
+package HomeworkPackage;
+
+public class IntArrayBinarySearch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	private int[] array;
+	private int recursions;
+	
+	public IntArrayBinarySearch(int[] array){
+		this.array = new int[array.length];
+		for(int i=0; i<array.length; i++){
+			this.array[i] = array[i];
+		}
+		
+		int range = array.length;
+		while(range!=0){
+			range = range/2;/*performs int devision; range is altered because after
+							the random number is generated, range is no longer needed*/ 
+			recursions++;
+		}
+	}
+	
+	public int searchFor(int number){
+		int index;
+		
+		for(int i=0; i<this.recursions; i++){
+			index = this.array.length/2;
+			if(this.array[index] == number){
+				return index;
+			}
+			else if(){
+				this.array = new int[]
+			}
+		}
+	}
+
+}
