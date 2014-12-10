@@ -14,10 +14,9 @@ public class TwoDArray {
 			}
 			System.out.println();
 			System.out.println();
-			System.out.println();
 		}
 		
-		System.out.println("----------------------------------------------------------------------------------");
+		System.out.println("-------------------------------------------------------------");
 		System.out.println();
 		
 		for(int row=0; row<plane.length; row++){
@@ -30,7 +29,7 @@ public class TwoDArray {
 			System.out.println();
 		}
 		
-		System.out.println("----------------------------------------------------------------------------------");
+		System.out.println("-------------------------------------------------------------");
 		System.out.println();
 		
 		for(int row=0; row<plane.length; row++){
@@ -38,7 +37,6 @@ public class TwoDArray {
 				plane[row][column] = (row+1)*(column+1);
 				System.out.print(plane[row][column] + "\t");
 			}
-			System.out.println();
 			System.out.println();
 			System.out.println();
 		}
