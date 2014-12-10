@@ -16,7 +16,6 @@ public class TwoDArray {
 			System.out.println();
 		}
 		
-		System.out.println("-------------------------------------------------------------");
 		System.out.println();
 		
 		for(int row=0; row<plane.length; row++){
@@ -28,7 +27,6 @@ public class TwoDArray {
 			System.out.println();
 		}
 		
-		System.out.println("-------------------------------------------------------------");
 		System.out.println();
 		
 		for(int row=0; row<plane.length; row++){
