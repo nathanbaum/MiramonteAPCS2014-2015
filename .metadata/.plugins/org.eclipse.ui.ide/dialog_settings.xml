@@ -4,21 +4,22 @@
 		<item value="205" key="DIALOG_Y_ORIGIN"/>
 		<item value="381" key="DIALOG_X_ORIGIN"/>
 	</section>
-	<section name="WORKBENCH_SETTINGS">
-		<list key="ENABLED_TRANSFERS">
-		</list>
-	</section>
 	<section name="ExternalProjectImportWizard">
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Nathan\Documents\GitHub\MiramonteAPCS2014-2015\Boggle"/>
 			<item value="F:\Git\MiramonteAPCS2014-2015\BusStation"/>
 			<item value="F:\mobile_workspace\Lab8"/>
 			<item value="F:\mobile_workspace"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
+		</list>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
 		</list>
 	</section>
 </section>
