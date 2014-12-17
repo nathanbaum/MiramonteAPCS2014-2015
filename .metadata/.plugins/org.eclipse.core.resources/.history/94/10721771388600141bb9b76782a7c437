@@ -12,7 +12,6 @@ public class Boggle {
 	public Boggle(String[] dictionary){
 		this.count = 0;
 		this.score = 0;
-		this.go = true;
 		this.wordChecker = new Words(dictionary);
 		this.board = new Board();
 		this.words = new ArrayList();

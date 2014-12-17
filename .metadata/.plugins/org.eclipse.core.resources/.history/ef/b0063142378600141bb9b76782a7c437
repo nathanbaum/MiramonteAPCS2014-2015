@@ -1,0 +1,12 @@
+package bogglePackage;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		String[] dictionary = {"hi", "bye", "bug", "big"};
+		
+		Boggle Boggle = new Boggle(dictionary);
+		Boggle.run();
+	}
+
+}
