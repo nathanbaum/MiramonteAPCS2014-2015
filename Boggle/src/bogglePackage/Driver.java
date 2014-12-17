@@ -1,11 +1,19 @@
 package bogglePackage;
+import java.util.Scanner;
 
 public class Driver {
 
 	public static void main(String[] args) {
-		String boggle = "boggle";
-		Boggle Boggle = new Boggle(boggle);
-		Boggle.run();
+		String[] dictionary = {"hi", "bye", "bug", "big"};
+		boolean gameIsOn = true;
+		Scanner scan = new Scanner(System.in);
+		
+		while(gameIsOn){
+			Boggle Boggle = new Boggle(dictionary);
+			Boggle.run(scan);
+		}
+		
+		scan.close();
 	}
 
 }
