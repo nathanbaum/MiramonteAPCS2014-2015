@@ -22,7 +22,7 @@ public class DoubleWord {
 	public static boolean hasDuplicate(ArrayList<String> words){
 		
 		for(int i=0; i<words.size(); i++){
-			if(search(words.get(i), words, i+1));
+			if(search(words.get(i), words, i+1)) return true;
 		}
 		
 		return false;

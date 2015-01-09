@@ -22,31 +22,37 @@ public class Board {
 	}
 	
 	public boolean usesLetters(String word){
-		ArrayList tempLetters = new ArrayList();
+		ArrayList<Character> tempLetters = new ArrayList<Character>();
 		for(char i:this.letters){
 			tempLetters.add(i);
 		}//fills a new arraylist with the letters from letters
 		
-		ArrayList wordArray = new ArrayList();
+		ArrayList<Character> arrayedWord = new ArrayList<Character>();
 		for(int i=0; i<word.length(); i++){
-			wordArray.add(word.charAt(i));
+			arrayedWord.add(word.charAt(i));
 		}
 		
-		while(wordArray.size()>0){
+		System.out.println(tempLetters.toString() + "/n" + arrayedWord.toString());
+		
+		int index=0;
+		for(int h=0; h<arrayedWord.size(); h++){
 			for(int i=0; i<tempLetters.size(); i++){
-				if(wordArray.get(0) == tempLetters.get(i)){
-					wordArray.remove(0);
+				if(arrayedWord.get(index) == tempLetters.get(i)){
+					arrayedWord.remove(index);
 					tempLetters.remove(i);
 				}
+				else index++;
 			}
 		}
 		
-		if(wordArray.size() == 0) return true;
+		if(arrayedWord.size() == 0) return true;
 		return false;
 	}
 	
 	public void print(){
-		System.out.print("Your letters: ();
-		for(int i=0; i<letters.length; i++)
+		System.out.print("Your letters: ");
+		for(int i=0; i<letters.length; i++){
+			System.out.print(letters[i] + " ");
+		}
 	}
 }

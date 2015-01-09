@@ -7,7 +7,7 @@ public class Boggle {
 	private boolean go;
 	private Board board;
 	private Words wordChecker;
-	private ArrayList words;
+	private ArrayList<String> words;
 	
 	public Boggle(String[] dictionary){
 		this.count = 0;
@@ -15,7 +15,7 @@ public class Boggle {
 		this.go = true;
 		this.wordChecker = new Words(dictionary);
 		this.board = new Board();
-		this.words = new ArrayList();
+		this.words = new ArrayList<String>();
 		board.generate();
 	}
 	
@@ -25,6 +25,7 @@ public class Boggle {
 		while(go){
 			System.out.println("Please enter a word or type \"-1\" to indicate that you are done.");
 			uIn = scan.next();
+			System.out.println(uIn);
 			if(uIn.equals("-1")) go = false;
 			else if(board.usesLetters(uIn) && wordChecker.isWord(uIn) && wordChecker.notAlreadyIn(uIn, (String[]) words.toArray())){
 				words.add(uIn);
