@@ -7,14 +7,15 @@ public class DoubleWord {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		ArrayList<String> words = new ArrayList<String>();
+		final int listSize = 5;
 		
-		for(int i=0; i<5; i++){
+		for(int i=0; i<listSize; i++){
 			System.out.println("Please enter word " + (i+1) + ":");
 			words.add(scan.next());
 		}
 		
 		System.out.println(words.toString());
-		System.out.println(hasDuplicate(words));
+		System.out.println("Has duplicate: " + hasDuplicate(words));
 		
 		scan.close();
 	}
