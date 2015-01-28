@@ -17,7 +17,7 @@ public class StringUtil {
 		peeps.add(j);
 		peeps.add(m);
 		
-		System.out.println(apcsReplaceAll("zzzaaaaaa", "aaa", "bq"));
+		System.out.println(apcsReplaceAll("zzzaaaaaa", "aaa", "bqaaa"));
 		
 		System.out.println(replaceNameNickname("Henry and John walked Elizabeth and Margaret down the beach. John was happy.", peeps));
 		System.out.println(replaceNameNickname("Henry married Margaret, who liked Henry's BFF, John, who dated Margaret's sister, Elizabeth, who is Henry's ex.", peeps));
@@ -27,6 +27,7 @@ public class StringUtil {
 		for(int i=0; i<str.length()-oldStr.length()+1; i++){
 			if(oldStr.equals(str.substring(i, i+oldStr.length()))){
 				str = str.substring(0, i) + newStr +str.substring(i+oldStr.length(), str.length());
+				i = i+newStr.length()-1;
 			}
 		}
 		return str;
