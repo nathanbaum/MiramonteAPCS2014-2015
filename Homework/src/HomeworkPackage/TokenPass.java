@@ -3,8 +3,9 @@ import java.util.Random;
 
 public class TokenPass {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		TokenPass game = new TokenPass(4);
+		
+		game.distributeCurrentPlayerTokens();
 	}
 	
 	private int[] board;
@@ -13,9 +14,11 @@ public class TokenPass {
 	
 	public TokenPass(int playerCount){
 		board = new int[playerCount];
+		currentPlayer = rand.nextInt(playerCount-1);
 		for(int i=0; i<board.length; i++){
 			board[i] = rand.nextInt(11);
 		}
+		printBoard();
 	}
 	
 	public void distributeCurrentPlayerTokens(){
@@ -23,13 +26,24 @@ public class TokenPass {
 		
 		board[currentPlayer] = 0;
 		int tempPlayer = currentPlayer + 1;
+		printBoard();
+		System.out.println("Tokens: " + tokens);
 		
-		for(int i=tokens; i>0; i--){
+		while(tokens>0){
 			if(tempPlayer>=board.length){
 				tempPlayer = 0;
 			}
 			board[tempPlayer]++;
 			tempPlayer++;
+			tokens--;
+			printBoard();
+			System.out.println("Tokens: " + tokens);
 		}
+	}
+	
+	public void printBoard(){
+		System.out.print("Board: ");
+		for(int i=0; i<board.length-1; i++) System.out.print(board[i] + ", ");
+		System.out.println(board[board.length-1]);
 	}
 }
