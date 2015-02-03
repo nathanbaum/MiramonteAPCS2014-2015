@@ -7,7 +7,7 @@ public class Driver {
 		Scanner scan = new Scanner(System.in);
 		GameManager game = new GameManager(scan);
 		
-		for(int i=0; i<5; i++){
+		for(int i=0; i<2; i++){
 			game.turn(1);
 			game.turn(2);
 		}

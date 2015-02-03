@@ -16,6 +16,16 @@ public class Board {
 		return board[y][x];
 	}
 	
+	public String checkWinner(){
+		for(int y=0; y<board.length; y++){
+			for(int x=0; x<board[y].length; x++){
+				if(board[y][x] > 0){
+					//write find one around
+				}
+			}
+		}
+	}
+	
 	public void printBoard(){
 		for(int y=0; y<board.length; y++){
 			System.out.print("|");
@@ -35,14 +45,25 @@ public class Board {
 	}
 	
 	public void dropPiece(int player, int x){
-		for(int y=0; y<board.length; y++){
-			if(board[y][x] != 0){
-				board[y-1][x] = player;
-				break;
-			}
-			if(y==board.length-1 && board[y][x]==0){
-				board[board.length-1][x] = player;
+		int y=0;
+		while(y!=board.length-1 && board[y+1][x]==0){
+			y++;
+		}
+		board[y][x] = player;
+	}
+	
+	private boolean has4Adjacent(int x, int y, int xOff, int yOff){
+		if(board[y][x] == board[y+yOff][x+xOff]){
+			x += xOff;
+			y += yOff;
+			if(board[y][x] == board[y+yOff][x+xOff]){
+				x += xOff;
+				y += yOff;
+				if(board[y][x] == board[y+yOff][x+xOff]){
+					return true;
+				}
 			}
 		}
+		return false;
 	}
 }

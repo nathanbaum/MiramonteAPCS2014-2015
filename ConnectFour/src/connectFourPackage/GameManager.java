@@ -12,10 +12,6 @@ public class GameManager {
 		board.printBoard();
 	}
 	
-	/*public String winner(){
-		
-	}*/
-	
 	public void turn(int player){
 		int uIn;
 		while(true){
