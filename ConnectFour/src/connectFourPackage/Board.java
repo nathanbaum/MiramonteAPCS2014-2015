@@ -22,7 +22,7 @@ public class Board {
 			for(int x=0; x<board[y].length; x++){
 				if(board[y][x] == 1) System.out.print("X|");
 				else if(board[y][x] == 0) System.out.print(" |");
-				else if(board[y][x] == -1) System.out.print("O|");
+				else if(board[y][x] == 2) System.out.print("O|");
 				else System.out.print("?|");
 			}
 			System.out.println();
