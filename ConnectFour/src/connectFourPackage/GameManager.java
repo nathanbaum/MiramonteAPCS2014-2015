@@ -5,6 +5,7 @@ public class GameManager {
 	private Scanner scan;
 	private final int HEIGHT = 6, WIDTH = 7;
 	private Board board;
+	public boolean isWin = false;
 	
 	public GameManager(Scanner scan){
 		this.scan = scan;
@@ -14,6 +15,7 @@ public class GameManager {
 	
 	public void turn(int player){
 		int uIn;
+		int winner;
 		while(true){
 			try{
 				System.out.print("Player " + player + ", pick column:");
@@ -27,5 +29,10 @@ public class GameManager {
 		}
 		board.dropPiece(player, uIn);
 		board.printBoard();
+		winner = board.checkWinner();
+		if(winner != 0){
+			System.out.println("Player " + winner + " wins!");
+			isWin = true;
+		}
 	}
 }
