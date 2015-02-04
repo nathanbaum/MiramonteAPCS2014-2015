@@ -32,8 +32,29 @@ public class GameManager {
 		winner = board.checkWinner();
 		//System.out.println(winner);
 		if(winner != 0){
-			System.out.println("Player " + winner + " wins!");
+			celebrate(winner);
 			isWin = true;
+		}
+	}
+	
+	private void celebrate(int winner){
+		for(int i=0; i<10; i++){
+			System.out.println("— Player " + winner + " wins! —");
+			pause(.15);
+			System.out.println("\\ Player " + winner + " wins! /");
+			pause(.15);
+			System.out.println("| Player " + winner + " wins! |");
+			pause(.15);
+			System.out.println("/ Player " + winner + " wins! \\");
+			pause(.15);
+		}
+	}
+	
+	private void pause(double seconds){
+		try {
+		    Thread.sleep((long) (1000*seconds));                 //1000 milliseconds is one second.
+		} catch(InterruptedException ex) {
+		    Thread.currentThread().interrupt();
 		}
 	}
 }
