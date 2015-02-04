@@ -39,7 +39,7 @@ public class GameManager {
 	
 	private void celebrate(int winner){
 		for(int i=0; i<10; i++){
-			System.out.println("— Player " + winner + " wins! —");
+			System.out.println("- Player " + winner + " wins! -");
 			pause(.15);
 			System.out.println("\\ Player " + winner + " wins! /");
 			pause(.15);

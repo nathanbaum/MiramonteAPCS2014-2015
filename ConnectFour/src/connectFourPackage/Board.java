@@ -22,12 +22,12 @@ public class Board {
 				if(board[y][x] > 0){//if it finds a player token
 					for(int yOff=-1; yOff<=1; yOff++){//loop for y value offsets in search for adjacent pieces
 						for(int xOff=-1; xOff<=1; xOff++){//loop for x value offsets in search for adjacent pieces
-							if(yOff+xOff != 0){//if the point is not the original point found
+							if(!(yOff==0 && xOff==0)){//if the point is not the original point found
 								if(inBounds(y,yOff,x,xOff) && board[y][x] == board[y+yOff][x+xOff]){//if the point with offset added is the same as original point (and not out of bounds)
 									if(inBounds(y,yOff*2,x,xOff*2) && board[y][x] == board[y+yOff*2][x+xOff*2]){//again with 3rd point
 										if(inBounds(y,yOff*3,x,xOff*3) && board[y][x] == board[y+yOff*3][x+xOff*3]){//continue with the 4rth point
-												return board[y][x];//return the type of token originally found
-										}
+											return board[y][x];//return the type of token originally found
+										}//WTF INDENTATION!!!
 									}
 								}
 							}
