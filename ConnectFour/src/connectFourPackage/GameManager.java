@@ -30,6 +30,7 @@ public class GameManager {
 		board.dropPiece(player, uIn);
 		board.printBoard();
 		winner = board.checkWinner();
+		//System.out.println(winner);
 		if(winner != 0){
 			System.out.println("Player " + winner + " wins!");
 			isWin = true;
