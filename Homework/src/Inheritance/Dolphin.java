@@ -25,4 +25,16 @@ public class Dolphin extends Mammal{
 		int yearsLeft = getLifeExpectancy() - currentAge();
 		return "This dolphin has " + (yearsLeft*3) + " dolphin years left to live.";
 	}
+	
+	public Dolphin(){
+		super();
+		this.lengthOfDolphin = -1;
+		this.lengthOfFin = -1;
+	}
+	
+	public Dolphin(int lifeExpectancy, int birthYear, double avgNumOffspring, double milkFatContent, double lengthOfDolphin, double lengthOfFin){
+		super(lifeExpectancy, birthYear, avgNumOffspring, milkFatContent);
+		this.lengthOfDolphin = lengthOfDolphin;
+		this.lengthOfFin = lengthOfFin;
+	}
 }
