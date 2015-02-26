@@ -8,3 +8,5 @@ public class House {
 	}
 
 }
+
+//3bed, 2bath, 1livingroom
