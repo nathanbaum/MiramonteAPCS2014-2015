@@ -6,7 +6,7 @@ public class DriverClass {
 		Room roomsInHouse[] = new Room[30];
         
         Bedroom myBedroom = new Bedroom(20, "blue", "carpet", 3, 2, 1, "walk-in", true);
-        Bathroom myBathroom = new Bathroom(50, "taupe", "marble", 2, 1, 2, true);
+        /*Bathroom myBathroom = new Bathroom(50, "taupe", "marble", 2, 1, 2, true);
          
         System.out.println(myBedroom.getClass().toString());
         System.out.println(Bedroom.class.toString());
@@ -26,7 +26,7 @@ public class DriverClass {
                 Bathroom theBathroom = (Bathroom)roomsInHouse[i];
                 System.out.println("Closet size in myBedroom2 object: " + theBathroom.getNumSinks());
             }
-        }
+        }*/
 
 	}
 

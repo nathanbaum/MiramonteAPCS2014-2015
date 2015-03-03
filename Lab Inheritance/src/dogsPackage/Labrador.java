@@ -17,6 +17,10 @@ public class Labrador extends Dog{
 		return breedWeight;
 	}
 	
+	public String getColor(){
+		return color;
+	}
+	
 	/*public String getClass(){
 	  	retrun "class Labrador.";
 	  }
