@@ -3,8 +3,10 @@ package inheritanceAbstractionAndInterfacesPackage;
 public abstract class Store {
 	private int sqFootage, numDoors, numWindows;
 	
-	public Store(int sqFoot, int numDoors, int numWindows){
-		
+	public Store(int sqFootage, int numDoors, int numWindows){
+		this.sqFootage = sqFootage;
+		this.numDoors = numDoors;
+		this.numWindows = numWindows;
 	}
 
 	public int getSqFootage() {
