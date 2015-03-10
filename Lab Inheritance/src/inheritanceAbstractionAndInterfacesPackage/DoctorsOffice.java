@@ -1,6 +1,6 @@
 package inheritanceAbstractionAndInterfacesPackage;
 
 public interface DoctorsOffice {
-	public int totalAmountBilledToInsurance();
-	public int costOfServices();
+	public double totalAmountBilledToInsurance();
+	public double costOfServices();
 }

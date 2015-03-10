@@ -1,9 +1,10 @@
 package inheritanceAbstractionAndInterfacesPackage;
 
 public class Optician implements DoctorsOffice{
-	private int costPerFrame, costOfEyeExam, patients, rent;
+	private int patients;
+	private double costPerFrame, costOfEyeExam, rent;
 	
-	public Optician(int costPerFrame, int costOfEyeExam, int patients, int rent){
+	public Optician(double costPerFrame, double costOfEyeExam, int patients, double rent){
 		this.costPerFrame = costPerFrame;
 		this.costOfEyeExam = costOfEyeExam;
 		this.patients = patients;
@@ -11,11 +12,15 @@ public class Optician implements DoctorsOffice{
 	}
 
 
-	public int totalAmountBilledToInsurance() {
+	public double totalAmountBilledToInsurance() {
 		return (costPerFrame+costOfEyeExam)*patients;
 	}
 
-	public int costOfServices() {
+	public double costOfServices() {
 		return rent;
+	}
+	
+	public String toString(){
+		return (String)
 	}
 }

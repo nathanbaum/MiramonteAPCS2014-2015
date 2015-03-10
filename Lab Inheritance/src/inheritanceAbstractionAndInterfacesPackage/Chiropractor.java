@@ -1,20 +1,21 @@
 package inheritanceAbstractionAndInterfacesPackage;
 
 public class Chiropractor implements DoctorsOffice {
-	private int patientsWithBackProblems, costPerCustomer, numDoctors, doctorSalary;
+	private int patientsWithBackProblems, numDoctors;
+	private double doctorSalary, costPerCustomer;
 
-	public Chiropractor(int patientsWithBackProblems, int costPerCustomer, int numDoctors, int doctorSalary){
+	public Chiropractor(int patientsWithBackProblems, double costPerCustomer, int numDoctors, double doctorSalary){
 		this.patientsWithBackProblems = patientsWithBackProblems;
 		this.costPerCustomer = costPerCustomer;
 		this.numDoctors = numDoctors;
 		this.doctorSalary = doctorSalary;
 	}
 	
-	public int totalAmountBilledToInsurance() {
+	public double totalAmountBilledToInsurance() {
 		return patientsWithBackProblems*costPerCustomer;
 	}
 
-	public int costOfServices() {
+	public double costOfServices() {
 		return numDoctors*doctorSalary;
 	}
 	
