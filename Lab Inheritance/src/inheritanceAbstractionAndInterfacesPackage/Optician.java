@@ -4,6 +4,10 @@ public class Optician implements DoctorsOffice{
 	private int patients;
 	private double costPerFrame, costOfEyeExam, rent;
 	
+	public Optician(){
+		
+	}
+	
 	public Optician(double costPerFrame, double costOfEyeExam, int patients, double rent){
 		this.costPerFrame = costPerFrame;
 		this.costOfEyeExam = costOfEyeExam;
@@ -21,6 +25,6 @@ public class Optician implements DoctorsOffice{
 	}
 	
 	public String toString(){
-		return (String)
+		return ("$" + totalAmountBilledToInsurance() + "\t$" + costOfServices());
 	}
 }

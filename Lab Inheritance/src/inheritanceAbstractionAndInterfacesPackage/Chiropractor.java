@@ -3,6 +3,10 @@ package inheritanceAbstractionAndInterfacesPackage;
 public class Chiropractor implements DoctorsOffice {
 	private int patientsWithBackProblems, numDoctors;
 	private double doctorSalary, costPerCustomer;
+	
+	public Chiropractor(){
+		
+	}
 
 	public Chiropractor(int patientsWithBackProblems, double costPerCustomer, int numDoctors, double doctorSalary){
 		this.patientsWithBackProblems = patientsWithBackProblems;
@@ -19,4 +23,7 @@ public class Chiropractor implements DoctorsOffice {
 		return numDoctors*doctorSalary;
 	}
 	
+	public String toString(){
+		return ("$" + totalAmountBilledToInsurance() + "\t$" + costOfServices());
+	}
 }

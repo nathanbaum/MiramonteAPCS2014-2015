@@ -2,6 +2,11 @@ package inheritanceAbstractionAndInterfacesPackage;
 
 public class PaloAltoDriver {
 	public static void main (String args []){
+		DoctorsOffice[] doctorsOfficeTypes = new DoctorsOffice[3];
+		doctorsOfficeTypes[0] = new Optician();
+		doctorsOfficeTypes[1] = new Chiropractor();
+		doctorsOfficeTypes[2] = new Dentist();
+		
 		
 		DoctorsOffice chiro1 = new Chiropractor(123, 79.43, 12, 80300);
 		DoctorsOffice chiro2 = new Chiropractor(106, 129.90, 8, 120000);
@@ -14,6 +19,15 @@ public class PaloAltoDriver {
 		DoctorsOffice dent3 = new Dentist(600, 200.34);
 			
 		DoctorsOffice [] office = {chiro1, opt1, dent1, chiro2, opt2, dent2, chiro3, opt3, dent3};
+		
+		for(DoctorsOffice type:doctorsOfficeTypes){
+			System.out.println(type.getClass().getSimpleName() + " Offices\tAmount Billed to Insurance\tCost of Services");
+			for(DoctorsOffice drOff:office){
+				if(drOff.getClass() == type.getClass()){
+					System.out.println("\t" + drOff);
+				}
+			}
+		}
 
 		Store rest1 = new Restaurant(2000, 4, 12, 90, "Southern Comfort", true);
 		Store rest2 = new Restaurant(1960, 3, 10, 62, "Califonia Fusion", false);
