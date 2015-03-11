@@ -23,7 +23,7 @@ public class Chiropractor implements DoctorsOffice {
 		return numDoctors*doctorSalary;
 	}
 	
-	public String toString(){
+	/*public String toString(){
 		return ("$" + totalAmountBilledToInsurance() + "\t\t$" + costOfServices());
-	}
+	}*/
 }

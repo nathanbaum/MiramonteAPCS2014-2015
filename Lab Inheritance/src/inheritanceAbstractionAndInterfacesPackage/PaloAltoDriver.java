@@ -1,7 +1,11 @@
 package inheritanceAbstractionAndInterfacesPackage;
+import java.text.NumberFormat;
 
 public class PaloAltoDriver {
 	public static void main (String args []){
+		NumberFormat nf = NumberFormat.getInstance();
+		
+		
 		DoctorsOffice[] doctorsOfficeTypes = new DoctorsOffice[3];
 		doctorsOfficeTypes[0] = new Optician();
 		doctorsOfficeTypes[1] = new Chiropractor();
@@ -30,20 +34,20 @@ public class PaloAltoDriver {
 			int counter = 1;
 			for(DoctorsOffice drOff:office){
 				if(drOff.getClass() == type.getClass()){
-					System.out.println("\t" + counter + "\t\t" + drOff);
+					System.out.println("\t" + counter + "\t\t$" + nf.format(drOff.totalAmountBilledToInsurance()) + "\t\t\t$" + nf.format(drOff.costOfServices()));
 					totalBilled += drOff.totalAmountBilledToInsurance();
 					totalCost += drOff.costOfServices();
 					counter++;
 				}
 			}
 			System.out.println("\tTotals\t\tAmount Billed to Insurance\tCost of Services");
-			System.out.println("\t\t\t" + totalBilled + "\t\t" + totalCost);
+			System.out.println("\t\t\t" + nf.format(totalBilled) + "\t\t\t$" + nf.format(totalCost));
 			grandTotalBilled += totalBilled;
 			grandTotalCost += totalCost;
 		}
 		System.out.println("___________________________________________________________________");
-		System.out.println("Total Office Billings to Insurance:\t" + grandTotalBilled);
-		System.out.println("Total Office Cost of Services:\t" + grandTotalCost);
+		System.out.println("Total Office Billings to Insurance:\t" + nf.format(grandTotalBilled));
+		System.out.println("Total Office Cost of Services:\t" + nf.format(grandTotalCost));
 		System.out.println("___________________________________________________________________");
 		
 		
@@ -74,5 +78,14 @@ public class PaloAltoDriver {
 		}
 		//for salons
 		//for elecronicsStores
+	}
+	
+	public static String findPopularCuisine(Store[] stores){
+		String popular;
+		for(Store store:stores){
+			if(store.getClass() == Restaurant.class){
+				
+			}
+		}
 	}
 }

@@ -21,7 +21,7 @@ public class Dentist implements DoctorsOffice{
 		return numPeopleThatNeedFilling*costOfFilling;
 	}
 	
-	public String toString(){
+	/*public String toString(){
 		return ("$" + totalAmountBilledToInsurance() + "\t\t$" + costOfServices());
-	}
+	}*/
 }

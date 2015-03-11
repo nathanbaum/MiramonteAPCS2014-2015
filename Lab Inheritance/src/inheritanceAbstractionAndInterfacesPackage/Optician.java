@@ -24,7 +24,7 @@ public class Optician implements DoctorsOffice{
 		return rent;
 	}
 	
-	public String toString(){
+	/*public String toString(){
 		return ("$" + totalAmountBilledToInsurance() + "\t\t$" + costOfServices());
-	}
+	}*/
 }
