@@ -1,8 +1,8 @@
 package inheritanceAbstractionAndInterfacesPackage;
 
 public class ElectronicsStore extends Store {
-	public boolean sellsAppleProducts;
-	public boolean sellsPhones;
+	private boolean sellsAppleProducts;
+	private boolean sellsPhones;
 	
 	public ElectronicsStore(int sqFootage, int numDoors, int numWindows, boolean sellsAppleProducts, boolean sellsPhones){
 		super(sqFootage, numDoors, numWindows);
@@ -12,11 +12,11 @@ public class ElectronicsStore extends Store {
 	}
 
 	
-	public boolean isSellsAppleProducts() {
+	public boolean sellsAppleProducts() {
 		return sellsAppleProducts;
 	}
 
-	public boolean isSellsPhones() {
+	public boolean sellsPhones() {
 		return sellsPhones;
 	}
 }
