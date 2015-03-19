@@ -3,6 +3,11 @@ import java.util.Scanner;
 public class Sandbox {
 
 	public static void main(String[] args) {
+		
+		drawStar(5);
+		
+		
+		
 		int uIn;
 
 		Scanner scan = new Scanner(System.in);
@@ -29,6 +34,14 @@ public class Sandbox {
 		  return true;
 		  }
 	
+	private static void drawStar(int num){
+		for(int j=0; j<num; j++){
+			System.out.print("* ");
 		}
+		System.out.println();
+		if(num>-1) drawStar(num-1);
+	}
+	
+}
 
 
